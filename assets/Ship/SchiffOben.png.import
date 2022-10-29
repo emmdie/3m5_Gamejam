@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background.png-8a42d2fa304991e023c9c5ea897c83a9.stex"
+path="res://.import/SchiffOben.png-672eecfeb8fef64ad3008c45f51481c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wave/background.png"
-dest_files=[ "res://.import/background.png-8a42d2fa304991e023c9c5ea897c83a9.stex" ]
+source_file="res://assets/Ship/SchiffOben.png"
+dest_files=[ "res://.import/SchiffOben.png-672eecfeb8fef64ad3008c45f51481c1.stex" ]
 
 [params]
 
