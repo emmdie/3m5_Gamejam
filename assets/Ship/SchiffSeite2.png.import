@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Title.png-702d7f443dbf7ce33b836072f15c4d68.stex"
+path="res://.import/SchiffSeite2.png-eabab94fbbb84e5ac8917e20ab6fa9de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/mainMenu/Title.png"
-dest_files=[ "res://.import/Title.png-702d7f443dbf7ce33b836072f15c4d68.stex" ]
+source_file="res://assets/Ship/SchiffSeite2.png"
+dest_files=[ "res://.import/SchiffSeite2.png-eabab94fbbb84e5ac8917e20ab6fa9de.stex" ]
 
 [params]
 
