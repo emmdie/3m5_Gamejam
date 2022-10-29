@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="Level" type="Node2D"]
+
+[node name="AmbientPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
