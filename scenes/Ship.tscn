@@ -27,6 +27,7 @@ shape = SubResource( 1 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )
 
+<<<<<<< HEAD
 [node name="Particles2D" type="Particles2D" parent="."]
 emitting = false
 amount = 20
@@ -34,4 +35,6 @@ lifetime = 4.0
 speed_scale = 2.0
 local_coords = false
 process_material = SubResource( 2 )
+=======
+>>>>>>> 63f08cb2b3440c4b4e13b9f2744ccdf5e85529ee
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
