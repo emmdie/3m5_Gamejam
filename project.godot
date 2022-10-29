@@ -23,10 +23,13 @@ config/icon="res://icon.png"
 
 window/size/width=320
 window/size/height=240
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [global]
 
 theme=false
+stretch=false
 
 [gui]
 
