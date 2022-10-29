@@ -52,4 +52,5 @@ lifetime = 4.0
 speed_scale = 2.0
 local_coords = false
 process_material = SubResource( 3 )
+
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
