@@ -2,12 +2,31 @@ extends Node2D
 
 onready var base = $Base
 onready var barrel = $Barrel
+onready var muzzle  = $Barrel/Muzzle
+onready var CANONBALL = preload("res://scenes/enemies/Canonball.tscn")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+export var reloadTime = 2
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func fire():
+	while true:
+		var canonballInstance = CANONBALL.instance()
+		canonballInstance.global_position = muzzle.global_position
+		canonballInstance.global_rotation = muzzle.global_rotation
+		get_node('/root').add_child(canonballInstance)
+		add_child(canonballInstance)
+		var t = Timer.new()
+		t.set_wait_time(0.5)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		t.queue_free()
+
+func turn():
+	get_node("Barrel").look_at(get_global_mouse_position())
 	
+func _process(delta):
+	turn()
+
+func _ready():
+	fire()
