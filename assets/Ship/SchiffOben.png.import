@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ship_example.png-67556db47cbf9f9964ab7b23ccd90be6.stex"
+path="res://.import/SchiffOben.png-672eecfeb8fef64ad3008c45f51481c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ship/Ship_example.png"
-dest_files=[ "res://.import/Ship_example.png-67556db47cbf9f9964ab7b23ccd90be6.stex" ]
+source_file="res://assets/Ship/SchiffOben.png"
+dest_files=[ "res://.import/SchiffOben.png-672eecfeb8fef64ad3008c45f51481c1.stex" ]
 
 [params]
 
