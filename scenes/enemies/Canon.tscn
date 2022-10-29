@@ -4,7 +4,6 @@
 [ext_resource path="res://scenes/enemies/Canon.gd" type="Script" id=2]
 
 [node name="Canon" type="Node2D"]
-position = Vector2( 200, 200 )
 script = ExtResource( 2 )
 
 [node name="Base" type="Sprite" parent="."]
