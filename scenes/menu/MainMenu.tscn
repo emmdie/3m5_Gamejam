@@ -49,6 +49,5 @@ margin_right = 174.0
 margin_bottom = 142.0
 theme = ExtResource( 3 )
 text = "Ein tolles Game"
-
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
