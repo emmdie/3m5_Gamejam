@@ -6,9 +6,9 @@
 [ext_resource path="res://scenes/Ship.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/enemies/Canon.tscn" type="PackedScene" id=5]
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=1]
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="Shader" id=2]
 code = "shader_type canvas_item;
 
 
@@ -40,28 +40,29 @@ void fragment(){
 }
 "
 
-[sub_resource type="OpenSimplexNoise" id=4]
+[sub_resource type="OpenSimplexNoise" id=3]
 octaves = 9
 period = 6.3
 persistence = 0.0
 
-[sub_resource type="NoiseTexture" id=5]
+[sub_resource type="NoiseTexture" id=4]
 width = 256
 height = 256
-noise = SubResource( 4 )
+noise = SubResource( 3 )
 
-[sub_resource type="ShaderMaterial" id=6]
-shader = SubResource( 3 )
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 2 )
 shader_param/bg = ExtResource( 3 )
 shader_param/wave1 = ExtResource( 1 )
 shader_param/wave2 = ExtResource( 2 )
-shader_param/noise = SubResource( 5 )
+shader_param/noise = SubResource( 4 )
 
 [node name="Level" type="Node2D"]
-material = SubResource( 2 )
+material = SubResource( 1 )
+position = Vector2( 1, 0 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 6 )
+material = SubResource( 5 )
 margin_right = 800.0
 margin_bottom = 800.0
 

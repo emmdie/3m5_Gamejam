@@ -1,9 +1,24 @@
 extends Area2D
 
+signal hit_by_canon
+signal pick_up_loot
+
 export var max_speed = 20
 export var acceleration = 1
+export var health = 5
 var screen_size
 var velocity = Vector2.ZERO
+
+func hit(arg_damage):
+	if health > 0:
+		health -= arg_damage
+	print(health)
+
+func _on_Ship_body_entered(body):
+	hide() # Ship disappears after being hit.
+	$AnimatedSprite.hide()
+	print("Hit")
+	emit_signal("hit_by_canon")
 
 func _ready():
 	screen_size = get_viewport().size
