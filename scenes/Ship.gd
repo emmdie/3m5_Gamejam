@@ -104,3 +104,4 @@ func _process(delta):
 		position = get_new_position(position, velocity, delta)
 	else:
 		no_movement()
+	GlobalVariables.shipPosition = global_position
