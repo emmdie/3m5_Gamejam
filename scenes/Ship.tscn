@@ -88,11 +88,10 @@ current = true
 smoothing_enabled = true
 
 [node name="HUD" parent="Camera2D" instance=ExtResource( 1 )]
-margin_left = -140.0
-margin_top = -97.0
-margin_right = -81.0
-margin_bottom = -62.0
-alignment = 2
+margin_left = -150.0
+margin_top = -110.0
+margin_right = -30.0
+margin_bottom = -82.0
 
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
