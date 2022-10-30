@@ -76,7 +76,7 @@ func set_animation(arg_velocity):
 		
 func set_rotation(arg_velocity):
 	var velocity_angle = arg_velocity.angle()
-	$AnimatedSprite.set_rotation(velocity_angle-PI)
+	$AnimatedSprite.set_rotation(velocity_angle)
 	$Particles2D.set_rotation(-velocity_angle)
 	
 func _process(delta):
