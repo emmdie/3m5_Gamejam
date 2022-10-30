@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/pickups/ribonukleoprotein/Sprite-0005.png" type="Texture" id=1]
+[ext_resource path="res://scenes/pickups/ribonukleoprotein.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -41,12 +42,14 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=9]
 height = 2.0
 
-[node name="ribonukleoprotein" type="Node2D"]
+[node name="ribonukleoprotein" type="Area2D"]
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 8 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 9 )
+[connection signal="area_entered" from="." to="." method="_on_ribonukleoprotein_area_entered"]
