@@ -3,8 +3,8 @@ extends Area2D
 signal hit_by_canon
 signal pick_up_loot
 
-export var max_speed = 20
-export var acceleration = 1
+onready var max_speed = GlobalVariables.boatSpeed
+export var acceleration = 5
 var screen_size
 var velocity = Vector2.ZERO
 
@@ -13,11 +13,9 @@ func hit(arg_damage):
 		GlobalVariables.health -= arg_damage
 	print(GlobalVariables.health)
 
-func _on_Ship_body_entered(body):
-	hide() # Ship disappears after being hit.
-	$AnimatedSprite.hide()
-	print("Hit")
-	emit_signal("hit_by_canon")
+func pick_up_loot(loot_name):
+	GlobalVariables.items[loot_name]+=1
+	print(GlobalVariables.items)
 
 func _ready():
 	screen_size = get_viewport().size
