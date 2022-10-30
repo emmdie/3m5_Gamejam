@@ -1,5 +1,6 @@
 extends Area2D
 
+export(int) var damage = 1
 export(int) var speed = 30
 
 func is_outside_view_bounds():
@@ -12,7 +13,7 @@ func _process(delta):
 	var velocity = ($Position2D2.global_position -  $Position2D.global_position) * delta * speed
 	global_position = global_position + velocity
 
-func _on_Canonball_body_entered(body):
-	if body.get_collision_layer_bit(2):
-		body.hit_by_Canonball(body.position)
-	queue_free()
+
+func _on_Canonball_area_entered(area):
+	if area.has_method("hit"):
+		area.hit(damage)
