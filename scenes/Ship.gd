@@ -6,6 +6,7 @@ signal pick_up_loot
 onready var max_speed = GlobalVariables.boatSpeed
 onready var damage_sound = $DamageSound
 onready var pickup_sound = $PickupSound
+onready var  coin_sound = $CoinSound
 export var acceleration = 5
 var screen_size
 var velocity = Vector2.ZERO
@@ -18,7 +19,11 @@ func hit(arg_damage):
 		get_tree().change_scene("res://scenes/menu/GameOverScreen.tscn")
 
 func pick_up_loot(loot_name):
-	pickup_sound.play()
+	if(loot_name == "coin"):
+		coin_sound.play()
+	else:
+		pickup_sound.play()
+	
 	GlobalVariables.items[loot_name]+=1
 	
 	print(GlobalVariables.items)

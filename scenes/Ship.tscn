@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/sounds/pickup.mp3" type="AudioStream" id=1]
 [ext_resource path="res://scenes/Ship.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/Ship/SchiffSeite3.png" type="Texture" id=5]
 [ext_resource path="res://assets/Ship/SchiffOben.png" type="Texture" id=6]
 [ext_resource path="res://assets/sounds/damage.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/sounds/cash.mp3" type="AudioStream" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 32.0178
@@ -18,14 +19,14 @@ height = 3.30873
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Horizontal",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Non_Horizontal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Horizontal",
 "speed": 5.0
 } ]
 
@@ -71,8 +72,13 @@ smoothing_enabled = true
 
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+volume_db = 5.278
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+volume_db = 9.51
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="body_entered" from="." to="." method="_on_Ship_body_entered"]
