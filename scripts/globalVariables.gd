@@ -1,15 +1,16 @@
 extends Node
 
+const startingHealth = 6
 var maxHealth
 var health
 var boatSpeed
 var items = {"coin": 0, "flowerpot": 0, "ribonukleoprotein": 0, "shoe": 0}
 
 func _ready():
-	pass # Replace with function body.
+	reset()
 
 func reset(): 
-	maxHealth = 6
+	maxHealth = startingHealth
 	health = maxHealth
 	boatSpeed = 200
 	

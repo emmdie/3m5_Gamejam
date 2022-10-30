@@ -5,14 +5,14 @@ signal pick_up_loot
 
 export var max_speed = 20
 export var acceleration = 1
-export var health = 5
 var screen_size
 var velocity = Vector2.ZERO
 
+
 func hit(arg_damage):
-	if health > 0:
-		health -= arg_damage
-	print(health)
+	if GlobalVariables.health > 0:
+		GlobalVariables.health -= arg_damage
+	print(GlobalVariables.health)
 
 func _on_Ship_body_entered(body):
 	hide() # Ship disappears after being hit.
