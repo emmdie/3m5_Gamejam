@@ -5,6 +5,7 @@ var maxHealth
 var health
 var boatSpeed
 var items = {"coin": 0, "flowerpot": 0, "ribonukleoprotein": 0, "shoe": 0}
+var shipPosition
 
 func _ready():
 	reset()

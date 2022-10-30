@@ -35,12 +35,12 @@ animations = [ {
 min_value = 0.3
 _data = [ Vector2( 0, 0.5 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=5]
+[sub_resource type="CurveTexture" id=7]
 curve = SubResource( 4 )
 
 [sub_resource type="ParticlesMaterial" id=6]
 lifetime_randomness = 0.2
-trail_size_modifier = SubResource( 5 )
+trail_size_modifier = SubResource( 7 )
 emission_shape = 2
 emission_box_extents = Vector3( 1, 1, 1 )
 flag_disable_z = true
@@ -87,13 +87,6 @@ process_material = SubResource( 6 )
 current = true
 smoothing_enabled = true
 
-[node name="HUD" parent="Camera2D" instance=ExtResource( 1 )]
-margin_left = -140.0
-margin_top = -97.0
-margin_right = -81.0
-margin_bottom = -62.0
-alignment = 2
-
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
 volume_db = 5.278
@@ -104,5 +97,10 @@ volume_db = 9.51
 
 [node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_right = 120.0
 
 [connection signal="body_entered" from="." to="." method="_on_Ship_body_entered"]

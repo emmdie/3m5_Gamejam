@@ -17,7 +17,7 @@ func fire():
 		# play audio
 		$AudioStreamPlayer2D.play()
 		var t = Timer.new()
-		t.set_wait_time(1)
+		t.set_wait_time(3)
 		t.set_one_shot(true)
 		self.add_child(t)
 		t.start()
@@ -25,7 +25,7 @@ func fire():
 		t.queue_free()
 
 func turn():
-	get_node("Barrel").look_at(get_global_mouse_position())
+	get_node("Barrel").look_at(GlobalVariables.shipPosition)
 	
 func _process(delta):
 	turn()

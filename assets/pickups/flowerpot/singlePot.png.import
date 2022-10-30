@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/canonBall.png-1a49926f86399d19e9b829ffd31e87c2.stex"
+path="res://.import/singlePot.png-b0ad3724218dbeae70b18915fc91e83c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/canon/canonBall.png"
-dest_files=[ "res://.import/canonBall.png-1a49926f86399d19e9b829ffd31e87c2.stex" ]
+source_file="res://assets/pickups/flowerpot/singlePot.png"
+dest_files=[ "res://.import/singlePot.png-b0ad3724218dbeae70b18915fc91e83c.stex" ]
 
 [params]
 
