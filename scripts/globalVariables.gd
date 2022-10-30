@@ -13,6 +13,5 @@ func _ready():
 func reset(): 
 	maxHealth = startingHealth
 	health = maxHealth
-	boatSpeed = 100
+	boatSpeed = 65
 	items = {"coin": 0, "flowerpot": 0, "ribonukleoprotein": 0, "shoe": 0}
-	

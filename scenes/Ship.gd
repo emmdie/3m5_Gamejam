@@ -86,7 +86,7 @@ func set_rotation(arg_velocity):
 	$Particles2D.set_rotation(-velocity_angle)
 
 func collision():
-	velocity = -.5 * velocity
+	velocity = -1 * velocity
 	
 func _process(delta):
 	var new_input = get_new_input(Input, velocity)

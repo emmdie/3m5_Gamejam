@@ -49,5 +49,6 @@ theme = ExtResource( 3 )
 text = "Quit"
 
 [connection signal="pressed" from="HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/AboutButton" to="." method="_on_AboutButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
