@@ -8,7 +8,6 @@ export var acceleration = 1
 var screen_size
 var velocity = Vector2.ZERO
 
-
 func hit(arg_damage):
 	if GlobalVariables.health > 0:
 		GlobalVariables.health -= arg_damage
