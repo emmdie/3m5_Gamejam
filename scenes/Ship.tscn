@@ -62,5 +62,4 @@ lifetime = 4.0
 speed_scale = 2.0
 local_coords = false
 process_material = SubResource( 4 )
-
 [connection signal="body_entered" from="." to="." method="_on_Ship_body_entered"]
