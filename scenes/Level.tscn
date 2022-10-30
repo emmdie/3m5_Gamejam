@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/wave/wave.png" type="Texture" id=1]
 [ext_resource path="res://assets/wave/wave2.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/pickups/Shoe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/pickups/flowerpot.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Islands/Island.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/pickups/ribonukleoprotein.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -90,3 +91,6 @@ position = Vector2( 164.185, 112.126 )
 
 [node name="Island1" parent="." instance=ExtResource( 9 )]
 position = Vector2( 300, 200 )
+
+[node name="ribonukleoprotein" parent="." instance=ExtResource( 10 )]
+position = Vector2( 278.931, 134.134 )
