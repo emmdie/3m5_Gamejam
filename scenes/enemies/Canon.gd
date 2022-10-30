@@ -25,7 +25,7 @@ func fire():
 		t.queue_free()
 
 func turn():
-	get_node("Barrel").look_at(get_global_mouse_position())
+	get_node("Barrel").look_at(GlobalVariables.shipPosition)
 	
 func _process(delta):
 	turn()
