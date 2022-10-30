@@ -1,6 +1,6 @@
 extends Area2D
 
-export var max_speed = 400
+export var max_speed = 200
 export var acceleration = 10
 var screen_size
 var velocity = Vector2.ZERO
@@ -10,20 +10,17 @@ func _ready():
 
 func slowdown(velocity):
 	if abs(velocity.y) >=0.5:
-		velocity.y *= 0.95
+		velocity.y *= 0.90
 	else: 
 		velocity.y = 0
 	if abs(velocity.x) >=0.5:
-		velocity.x *= 0.95
+		velocity.x *= 0.90
 	else: 
 		velocity.x = 0
 	return velocity
-	
 
-func _process(delta):
-	velocity = slowdown(velocity)
+func get_new_input(input, velocity):
 	var input_bool = false
-		
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1*acceleration
 		input_bool = true
@@ -36,13 +33,20 @@ func _process(delta):
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1*acceleration
 		input_bool = true
+	return {"input_bool":input_bool, "velocity":velocity}	
 
+func _process(delta):
+	var new_input = get_new_input(Input, velocity)
+	if new_input.input_bool:
+		velocity = new_input.velocity
+	else:
+		velocity = slowdown(velocity)
 	if velocity.length() > 0:
 		if velocity.length() > max_speed:
 			velocity = velocity.normalized() * max_speed
 		$AnimatedSprite.play()
 		$Particles2D.set_emitting(true)
-		if input_bool:
+		if new_input.input_bool:
 			if abs(velocity.x) < 10 and abs(velocity.y) !=0 :
 				$AnimatedSprite.animation = "Non_Horizontal"
 			else:
