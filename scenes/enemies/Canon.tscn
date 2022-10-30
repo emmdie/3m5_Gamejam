@@ -14,7 +14,7 @@ texture = ExtResource( 3 )
 
 [node name="Barrel" type="Sprite" parent="."]
 texture = ExtResource( 1 )
-offset = Vector2( 6, 0 )
+offset = Vector2( 4, 0 )
 
 [node name="Muzzle" type="Position2D" parent="Barrel"]
 position = Vector2( 65, 0 )
