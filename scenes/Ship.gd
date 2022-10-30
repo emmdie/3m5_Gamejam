@@ -11,7 +11,8 @@ var velocity = Vector2.ZERO
 func hit(arg_damage):
 	if GlobalVariables.health > 0:
 		GlobalVariables.health -= arg_damage
-	print(GlobalVariables.health)
+	else:
+		get_tree().change_scene("res://scenes/menu/GameOverScreen.tscn")
 
 func pick_up_loot(loot_name):
 	GlobalVariables.items[loot_name]+=1
