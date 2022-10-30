@@ -58,8 +58,6 @@ func get_new_input(input, velocity):
 
 func get_new_position(arg_position, arg_velocity, arg_delta):
 	position += arg_velocity * arg_delta
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
 	return position
 
 func normalize_velocity_if_neccesary(arg_velocity):
@@ -88,7 +86,7 @@ func set_rotation(arg_velocity):
 	$Particles2D.set_rotation(-velocity_angle)
 
 func collision():
-	velocity = -velocity
+	velocity = -.5 * velocity
 	
 func _process(delta):
 	var new_input = get_new_input(Input, velocity)
