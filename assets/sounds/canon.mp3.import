@@ -11,5 +11,5 @@ dest_files=[ "res://.import/canon.mp3-026e99b9d886c78e22340d11ccbcb8c3.mp3str" ]
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
