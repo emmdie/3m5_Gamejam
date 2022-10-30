@@ -25,8 +25,6 @@ func pick_up_loot(loot_name):
 		pickup_sound.play()
 	
 	GlobalVariables.items[loot_name]+=1
-	
-	print(GlobalVariables.items)
 
 func _ready():
 	screen_size = get_viewport().size
@@ -86,8 +84,11 @@ func set_animation(arg_velocity):
 		
 func set_rotation(arg_velocity):
 	var velocity_angle = arg_velocity.angle()
-	$AnimatedSprite.set_rotation(velocity_angle-PI)
+	$AnimatedSprite.set_rotation(velocity_angle)
 	$Particles2D.set_rotation(-velocity_angle)
+
+func collision():
+	velocity = -velocity
 	
 func _process(delta):
 	var new_input = get_new_input(Input, velocity)

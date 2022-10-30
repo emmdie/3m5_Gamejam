@@ -8,8 +8,10 @@
 [ext_resource path="res://scenes/pickups/Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/pickups/Shoe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/pickups/flowerpot.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/sounds/ozean.mp3" type="AudioStream" id=9]
-[ext_resource path="res://assets/sounds/music.mp3" type="AudioStream" id=10]
+[ext_resource path="res://scenes/Islands/Island.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/pickups/ribonukleoprotein.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/sounds/ozean.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/music.mp3" type="AudioStream" id=12]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -70,6 +72,9 @@ position = Vector2( 1, 0 )
 material = SubResource( 5 )
 margin_right = 800.0
 margin_bottom = 800.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Ship" parent="." instance=ExtResource( 4 )]
 position = Vector2( 203.563, 192.365 )
@@ -87,9 +92,14 @@ position = Vector2( 61.4025, 188.212 )
 position = Vector2( 164.185, 112.126 )
 
 [node name="AmbientSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 11 )
 autoplay = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource( 12 )
 autoplay = true
+[node name="Island1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 300, 200 )
+
+[node name="ribonukleoprotein" parent="." instance=ExtResource( 10 )]
+position = Vector2( 278.931, 134.134 )

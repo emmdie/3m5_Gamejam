@@ -17,3 +17,4 @@ func _process(delta):
 func _on_Canonball_area_entered(area):
 	if area.has_method("hit"):
 		area.hit(damage)
+		queue_free()
