@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/wave/wave.png" type="Texture" id=1]
 [ext_resource path="res://assets/wave/wave2.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://scenes/pickups/Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/pickups/Shoe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/pickups/flowerpot.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/sounds/ozean.mp3" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds/music.mp3" type="AudioStream" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -83,3 +85,11 @@ position = Vector2( 61.4025, 188.212 )
 
 [node name="Shoe" parent="." instance=ExtResource( 7 )]
 position = Vector2( 164.185, 112.126 )
+
+[node name="AmbientSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true

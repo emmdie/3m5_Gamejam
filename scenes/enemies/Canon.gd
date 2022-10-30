@@ -14,6 +14,8 @@ func fire():
 		canonballInstance.global_rotation = muzzle.global_rotation
 		get_node('/root').add_child(canonballInstance)
 		add_child(canonballInstance)
+		# play audio
+		$AudioStreamPlayer2D.play()
 		var t = Timer.new()
 		t.set_wait_time(3)
 		t.set_one_shot(true)

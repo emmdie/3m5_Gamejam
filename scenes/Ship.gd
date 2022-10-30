@@ -4,18 +4,23 @@ signal hit_by_canon
 signal pick_up_loot
 
 onready var max_speed = GlobalVariables.boatSpeed
+onready var damage_sound = $DamageSound
+onready var pickup_sound = $PickupSound
 export var acceleration = 5
 var screen_size
 var velocity = Vector2.ZERO
 
 func hit(arg_damage):
+	damage_sound.play()
 	if GlobalVariables.health > 0:
 		GlobalVariables.health -= arg_damage
 	else:
 		get_tree().change_scene("res://scenes/menu/GameOverScreen.tscn")
 
 func pick_up_loot(loot_name):
+	pickup_sound.play()
 	GlobalVariables.items[loot_name]+=1
+	
 	print(GlobalVariables.items)
 
 func _ready():
