@@ -62,4 +62,12 @@ lifetime = 4.0
 speed_scale = 2.0
 local_coords = false
 process_material = SubResource( 4 )
+<<<<<<< HEAD
+=======
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+
+>>>>>>> 464282786409bac13e94474c2ebba131b29ee8fc
 [connection signal="body_entered" from="." to="." method="_on_Ship_body_entered"]
