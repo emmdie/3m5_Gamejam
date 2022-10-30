@@ -1,7 +1,7 @@
 extends Area2D
 
 export(int) var damage = 1
-export(int) var speed = 30
+export(int) var speed = 15
 
 func is_outside_view_bounds():
 	return position.x>OS.get_screen_size().x or position.x<0.0\
