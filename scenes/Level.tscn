@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/wave/wave.png" type="Texture" id=1]
 [ext_resource path="res://assets/wave/wave2.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://scenes/pickups/ribonukleoprotein.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/sounds/ozean.mp3" type="AudioStream" id=11]
 [ext_resource path="res://assets/sounds/music.mp3" type="AudioStream" id=12]
+[ext_resource path="res://scenes/borders.gd" type="Script" id=13]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -37,7 +38,7 @@ float box(vec2 _st, vec2 _size){
 }
 
 void fragment(){
-	vec2 st = vec2(UV.x/(SCREEN_PIXEL_SIZE.y/SCREEN_PIXEL_SIZE.x),UV.y);
+	vec2 st = vec2(UV.x*10.,UV.y*10.);
     vec3 color = vec3(0.0);
    st = tile(st,8.0);
 	color += texture(bg,st).rgb;
@@ -70,11 +71,10 @@ position = Vector2( 1, 0 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource( 5 )
-margin_right = 800.0
-margin_bottom = 800.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = -928.0
+margin_top = -628.0
+margin_right = 1588.0
+margin_bottom = 1648.0
 
 [node name="Ship" parent="." instance=ExtResource( 4 )]
 position = Vector2( 203.563, 192.365 )
@@ -98,8 +98,17 @@ autoplay = true
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 autoplay = true
+
 [node name="Island1" parent="." instance=ExtResource( 9 )]
 position = Vector2( 300, 200 )
 
 [node name="ribonukleoprotein" parent="." instance=ExtResource( 10 )]
 position = Vector2( 278.931, 134.134 )
+
+[node name="borders" type="Area2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="borders"]
+polygon = PoolVector2Array( -480, -353, -442, 349, 543, 383, 554, -185 )
+
+[connection signal="area_exited" from="borders" to="borders" method="_on_borders_area_exited"]
