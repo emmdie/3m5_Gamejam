@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wave2.png-eb773e39bdcc9638377e4173e6afe0ba.stex"
+path="res://.import/Sprite-0001.png-f070070e099dc310f9f1ab4471f4f322.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wave/wave2.png"
-dest_files=[ "res://.import/wave2.png-eb773e39bdcc9638377e4173e6afe0ba.stex" ]
+source_file="res://assets/pickups/pirateCoin/Sprite-0001.png"
+dest_files=[ "res://.import/Sprite-0001.png-f070070e099dc310f9f1ab4471f4f322.stex" ]
 
 [params]
 
@@ -19,17 +19,17 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=true
+flags/repeat=0
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
-process/premult_alpha=true
+process/fix_alpha_border=true
+process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
