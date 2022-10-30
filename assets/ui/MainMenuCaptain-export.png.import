@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wavingFlag.png-f0efef61fc5baa694e9dab4708804e84.stex"
+path="res://.import/MainMenuCaptain-export.png-22405169bdbd0d677c231812d12e4c63.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/islandDeko/wavingFlag.png"
-dest_files=[ "res://.import/wavingFlag.png-f0efef61fc5baa694e9dab4708804e84.stex" ]
+source_file="res://assets/ui/MainMenuCaptain-export.png"
+dest_files=[ "res://.import/MainMenuCaptain-export.png-22405169bdbd0d677c231812d12e4c63.stex" ]
 
 [params]
 
