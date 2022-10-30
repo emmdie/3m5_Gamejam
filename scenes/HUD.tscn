@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/ui/UiTheme.tres" type="Theme" id=1]
 [ext_resource path="res://HUD.gd" type="Script" id=2]
@@ -6,9 +6,12 @@
 [ext_resource path="res://assets/pickups/ribonukleoprotein/singleDNA.png" type="Texture" id=4]
 [ext_resource path="res://assets/pickups/pirateCoin/silngleCoin.png" type="Texture" id=5]
 [ext_resource path="res://assets/pickups/shoe/singleShoe.png" type="Texture" id=6]
+[ext_resource path="res://assets/pickups/heart.png" type="Texture" id=7]
 
 [node name="HUD" type="HBoxContainer"]
 anchor_right = 1.0
+margin_left = 10.0
+margin_right = 10.0
 margin_bottom = 28.0
 script = ExtResource( 2 )
 
@@ -94,5 +97,5 @@ margin_right = 186.0
 margin_bottom = 28.0
 
 [node name="Sprite" type="Sprite" parent="Health"]
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 offset = Vector2( -10, 15 )
