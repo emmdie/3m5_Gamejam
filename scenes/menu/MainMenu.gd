@@ -1,4 +1,4 @@
-extends MarginContainer
+extends BoxContainer
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -12,8 +12,15 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_QuitButton_pressed():
-	get_tree().quit()
+
 
 func _on_PlayButton_pressed():
 	get_tree().change_scene("res://scenes/Level.tscn")
+
+
+func _on_AboutButton_pressed():
+	OS.shell_open("https://github.com/emmdie/3m5_Gamejam/blob/main/README.md")
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit()
