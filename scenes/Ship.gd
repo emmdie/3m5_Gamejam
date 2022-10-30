@@ -16,7 +16,6 @@ func hit(arg_damage):
 
 func pick_up_loot(loot_name):
 	GlobalVariables.items[loot_name]+=1
-	print(GlobalVariables.items)
 
 func _ready():
 	screen_size = get_viewport().size
