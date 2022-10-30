@@ -19,6 +19,10 @@ config/description="A pirate game made in two days for the 9th 3m5 Gamejam"
 run/main_scene="res://scenes/menu/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalVariables="*res://scripts/globalVariables.gd"
+
 [display]
 
 window/size/width=320
