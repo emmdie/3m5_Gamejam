@@ -13,4 +13,4 @@ func _on_QuitButton_pressed():
 	get_tree().quit()
 
 func _on_OptionsButton_pressed():
-	add_child(PAUSE.instance())
+	OS.window_fullscreen = !OS.window_fullscreen

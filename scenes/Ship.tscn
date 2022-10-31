@@ -9,7 +9,6 @@
 [ext_resource path="res://assets/sounds/damage.mp3" type="AudioStream" id=7]
 [ext_resource path="res://assets/sounds/cash.mp3" type="AudioStream" id=8]
 [ext_resource path="res://assets/sounds/pickup.mp3" type="AudioStream" id=9]
-[ext_resource path="res://scenes/CanvasLayer.gd" type="Script" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.0
@@ -53,6 +52,10 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 angle = -174.5
 angle_random = 0.18
+
+[sub_resource type="GDScript" id=8]
+script/source = "extends CanvasLayer
+"
 
 [node name="Ship" type="Area2D"]
 position = Vector2( 0, 0.148651 )
@@ -100,7 +103,7 @@ volume_db = 9.51
 stream = ExtResource( 8 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource( 10 )
+script = SubResource( 8 )
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 1 )]
 margin_right = 120.0

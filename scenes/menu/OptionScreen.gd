@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends MarginContainer
 
 func _ready():
 	get_tree().paused = true
