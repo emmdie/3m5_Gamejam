@@ -29,25 +29,26 @@ text = "Play"
 
 [node name="OptionsButton" type="Button" parent="HBoxContainer"]
 margin_left = 66.0
-margin_right = 165.0
+margin_right = 206.0
 margin_bottom = 34.0
 theme = ExtResource( 3 )
-text = "Options"
+text = "Fullscreen"
 
 [node name="AboutButton" type="Button" parent="HBoxContainer"]
-margin_left = 169.0
-margin_right = 248.0
+margin_left = 210.0
+margin_right = 267.0
 margin_bottom = 34.0
 theme = ExtResource( 3 )
-text = "About"
+text = "Info"
 
 [node name="QuitButton" type="Button" parent="HBoxContainer"]
-margin_left = 252.0
-margin_right = 309.0
+margin_left = 271.0
+margin_right = 328.0
 margin_bottom = 34.0
 theme = ExtResource( 3 )
-text = "Quit"
+text = "Exit"
 
 [connection signal="pressed" from="HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/AboutButton" to="." method="_on_AboutButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

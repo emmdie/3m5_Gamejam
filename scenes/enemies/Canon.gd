@@ -17,7 +17,8 @@ func fire():
 		# play audio
 		$AudioStreamPlayer2D.play()
 		var t = Timer.new()
-		t.set_wait_time(3)
+		var r = rand_range(0, 2)
+		t.set_wait_time(2 + r)
 		t.set_one_shot(true)
 		self.add_child(t)
 		t.start()
