@@ -14,3 +14,5 @@ Made in Godot with Aseprite, Garage Band, Audacity and food provided by 3m5
 * Kenney: https://kenney.nl/assets/kenney-fonts
 ## Colors
 * coolors.co : https://coolors.co/palette/12263a-06bcc1-c5d8d1-f4edea-f4d1ae
+## Water shader 
+* https://godotshaders.com/shader/simple-2d-water/
